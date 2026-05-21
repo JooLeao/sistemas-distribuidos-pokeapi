@@ -1,0 +1,16 @@
+# Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes Virtuais
+venv/
+env/
+.env
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Imagens baixadas (não subir para o GitHub para não pesar o repositório)
+pokemon_images/

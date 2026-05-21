@@ -1,0 +1,33 @@
+# PokéAPI - Avaliação de Desempenho e Concorrência em Python
+
+Repositório contendo o código-fonte do projeto prático de extração de dados da [PokéAPI](https://pokeapi.co/), desenvolvido para a disciplina de Sistemas Paralelos e Distribuídos do Instituto Federal de Pernambuco (IFPE) - Campus Belo Jardim.
+
+## 📝 Sobre o Projeto
+
+O objetivo deste projeto é avaliar e comparar o desempenho de diferentes arquiteturas de computação concorrente e paralela na linguagem Python para tarefas restritas por I/O (*I/O-bound*). 
+
+O sistema realiza o download em lote de imagens de Pokémon (cargas de 100, 500 e 1.000 requisições), confrontando o tempo de execução de uma abordagem **Sequencial** (linha de base) com três abordagens paralelas variando o número de *workers* (2, 4 e 8):
+
+* `threading`
+* `multiprocessing`
+* `concurrent.futures`
+
+## 🚀 Tecnologias Utilizadas
+
+* Python 3.11+
+* `requests` (Consumo da API RESTful)
+* `os` e `time` (Persistência em disco e medição temporal)
+* `statistics` (Cálculos de Média, Mediana e Desvio Padrão)
+
+## 📁 Estrutura do Repositório
+
+* `main.py`: Orquestrador dos testes, responsável por executar as baterias, medir o tempo e calcular as métricas estatísticas finais.
+* `metodos.py`: Contém as abstrações das quatro lógicas de execução.
+* `downloader.py`: Responsável pela requisição HTTP direta à PokéAPI e pela gravação dos arquivos de imagem.
+* `pokemon_images/`: Diretório gerado automaticamente durante a execução (ignorado no versionamento).
+
+## ⚙️ Como Executar
+
+1. Clone este repositório:
+   ```bash
+   git clone [https://github.com/JooLeao/sistemas-distribuidos-pokeapi.git](https://github.com/JooLeao/sistemas-distribuidos-pokeapi.git)
